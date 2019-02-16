@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : localhost_3306
 Source Server Version : 50505
 Source Host           : localhost:3306
-Source Database       : fastadmin
+Source Database       : market
 
 Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2019-02-16 12:05:35
+Date: 2019-02-16 14:11:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,8 +40,8 @@ CREATE TABLE `fa_admin` (
 -- ----------------------------
 -- Records of fa_admin
 -- ----------------------------
-INSERT INTO `fa_admin` VALUES ('1', 'admin', 'Admin', '49d19ae006e10125b2f08f771d715161', 'e92174', '/assets/img/avatar.png', 'admin@admin.com', '0', '1550281656', '1492186163', '1550281656', 'ede2b4a4-09da-4c30-b3cd-aee630ae079b', 'normal');
-INSERT INTO `fa_admin` VALUES ('2', 'xiaomei', '小妹', 'cf47bbc955c965184cb955ba9c247456', 'zeaoB6', '/assets/img/avatar.png', '12@qq.com', '0', '1550247300', '1550247241', '1550247317', '', 'normal');
+INSERT INTO `fa_admin` VALUES ('1', 'admin', 'Admin', '49d19ae006e10125b2f08f771d715161', 'e92174', '/assets/img/avatar.png', 'admin@admin.com', '0', '1550296595', '1492186163', '1550296595', 'dcf62fe1-18c3-44a7-8e00-00954915c972', 'normal');
+INSERT INTO `fa_admin` VALUES ('2', 'limei', '李梅', 'c25e081ce95942a3e73ab232eaed281c', 'kQ0gXu', '/assets/img/avatar.png', '12@qq.com', '0', '1550296541', '1550247241', '1550296584', '', 'normal');
 
 -- ----------------------------
 -- Table structure for fa_admin_log
@@ -59,7 +59,7 @@ CREATE TABLE `fa_admin_log` (
   `createtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '操作时间',
   PRIMARY KEY (`id`),
   KEY `name` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='管理员日志表';
+) ENGINE=InnoDB AUTO_INCREMENT=350 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='管理员日志表';
 
 -- ----------------------------
 -- Records of fa_admin_log
@@ -338,6 +338,81 @@ INSERT INTO `fa_admin_log` VALUES ('271', '1', 'admin', '/admin/market/good/back
 INSERT INTO `fa_admin_log` VALUES ('272', '1', 'admin', '/admin/market/good/base/info/index', 'market good base 商品信息管理 查看', '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550289593');
 INSERT INTO `fa_admin_log` VALUES ('273', '1', 'admin', '/admin/market/good/base/info/index', 'market good base 商品信息管理 查看', '{\"q_word\":[\"\"],\"pageNumber\":\"1\",\"pageSize\":\"10\",\"andOr\":\"AND\",\"orderBy\":[[\"name\",\"ASC\"]],\"searchTable\":\"tbl\",\"showField\":\"name\",\"keyField\":\"id\",\"searchField\":[\"name\"],\"name\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550289600');
 INSERT INTO `fa_admin_log` VALUES ('274', '1', 'admin', '/admin/market/good/back/add?dialog=1', 'market good 商品退货 添加', '{\"dialog\":\"1\",\"row\":{\"good_id\":\"4\",\"num\":\"001\",\"backdate\":\"2019-02-16\",\"back_stock\":\"1\",\"remark\":\"\\u574f\\u4e86\"}}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550289606');
+INSERT INTO `fa_admin_log` VALUES ('275', '1', 'admin', '/admin/index/login.html', '登录', '{\"__token__\":\"c4870612728f39b38d37756d48d1268c\",\"username\":\"admin\",\"captcha\":\"MTCE\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290673');
+INSERT INTO `fa_admin_log` VALUES ('276', '1', 'admin', '/admin/auth/rule/edit/ids/1?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"admin\\/auth\\/adminlog\",\"title\":\"\\u63a7\\u5236\\u53f0\",\"icon\":\"fa fa-dashboard\",\"weigh\":\"143\",\"condition\":\"\",\"remark\":\"Dashboard tips\",\"status\":\"normal\"},\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290764');
+INSERT INTO `fa_admin_log` VALUES ('277', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290765');
+INSERT INTO `fa_admin_log` VALUES ('278', '1', 'admin', '/admin/auth/rule/edit/ids/1?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"auth\\/adminlog\",\"title\":\"\\u63a7\\u5236\\u53f0\",\"icon\":\"fa fa-dashboard\",\"weigh\":\"143\",\"condition\":\"\",\"remark\":\"Dashboard tips\",\"status\":\"normal\"},\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290798');
+INSERT INTO `fa_admin_log` VALUES ('279', '1', 'admin', '/admin/auth/rule/edit/ids/166?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"137\",\"name\":\"market\\/stock\\/add\",\"title\":\"\\u5546\\u54c1\\u5165\\u5e93\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"166\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290867');
+INSERT INTO `fa_admin_log` VALUES ('280', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290867');
+INSERT INTO `fa_admin_log` VALUES ('281', '1', 'admin', '/admin/auth/rule/del/ids/6', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"6\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290958');
+INSERT INTO `fa_admin_log` VALUES ('282', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290958');
+INSERT INTO `fa_admin_log` VALUES ('283', '1', 'admin', '/admin/auth/rule/edit/ids/7?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"137\",\"name\":\"general\\/attachment\",\"title\":\"\\u540e\\u53f0\\u56fe\\u7247\\u7ba1\\u7406\",\"icon\":\"fa fa-file-image-o\",\"weigh\":\"53\",\"condition\":\"\",\"remark\":\"Attachment tips\",\"status\":\"normal\"},\"ids\":\"7\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290978');
+INSERT INTO `fa_admin_log` VALUES ('284', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550290978');
+INSERT INTO `fa_admin_log` VALUES ('285', '1', 'admin', '/admin/auth/rule/del/ids/66,67,73,79', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"66,67,73,79\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291041');
+INSERT INTO `fa_admin_log` VALUES ('286', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291041');
+INSERT INTO `fa_admin_log` VALUES ('287', '1', 'admin', '/admin/auth/rule/del/ids/3', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"3\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291061');
+INSERT INTO `fa_admin_log` VALUES ('288', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291062');
+INSERT INTO `fa_admin_log` VALUES ('289', '1', 'admin', '/admin/auth/rule/edit/ids/2?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"general\",\"title\":\"\\u4e2a\\u4eba\\u8d26\\u6237\\u914d\\u7f6e\",\"icon\":\"fa fa-cogs\",\"weigh\":\"137\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291101');
+INSERT INTO `fa_admin_log` VALUES ('290', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291102');
+INSERT INTO `fa_admin_log` VALUES ('291', '1', 'admin', '/admin/auth/rule/del/ids/4', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"4\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291157');
+INSERT INTO `fa_admin_log` VALUES ('292', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291158');
+INSERT INTO `fa_admin_log` VALUES ('293', '1', 'admin', '/admin/auth/rule/edit/ids/9?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"5\",\"name\":\"auth\\/admin\",\"title\":\"\\u7cfb\\u7edf\\u7528\\u6237\\u7ba1\\u7406\",\"icon\":\"fa fa-user\",\"weigh\":\"118\",\"condition\":\"\",\"remark\":\"Admin tips\",\"status\":\"normal\"},\"ids\":\"9\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291207');
+INSERT INTO `fa_admin_log` VALUES ('294', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291207');
+INSERT INTO `fa_admin_log` VALUES ('295', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291235');
+INSERT INTO `fa_admin_log` VALUES ('296', '1', 'admin', '/admin/auth/group/edit/ids/6?dialog=1', '权限管理 角色组 编辑', '{\"dialog\":\"1\",\"row\":{\"rules\":\"139,140,141,142,143,153,154,155,156,157,160,161,162,163,164,167,168,169,170,171,138,152,159,158,166,137,151\",\"pid\":\"1\",\"name\":\"\\u666e\\u901a\\u5143\\u5de5\",\"status\":\"normal\"},\"ids\":\"6\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291247');
+INSERT INTO `fa_admin_log` VALUES ('297', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291267');
+INSERT INTO `fa_admin_log` VALUES ('298', '1', 'admin', '/admin/auth/group/edit/ids/6?dialog=1', '权限管理 角色组 编辑', '{\"dialog\":\"1\",\"row\":{\"rules\":\"139,140,141,142,143,153,154,155,156,157,160,161,162,163,164,167,168,169,170,171,138,152,159,158,166,137,151\",\"pid\":\"1\",\"name\":\"\\u666e\\u901a\\u5458\\u5de5\",\"status\":\"normal\"},\"ids\":\"6\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291274');
+INSERT INTO `fa_admin_log` VALUES ('299', '1', 'admin', '/admin/auth/group/del/ids/2,3,5,4', '权限管理 角色组 删除', '{\"action\":\"del\",\"ids\":\"2,3,5,4\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291281');
+INSERT INTO `fa_admin_log` VALUES ('300', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291286');
+INSERT INTO `fa_admin_log` VALUES ('301', '1', 'admin', '/admin/auth/group/del/ids/2', '权限管理 角色组 删除', '{\"action\":\"del\",\"ids\":\"2\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291291');
+INSERT INTO `fa_admin_log` VALUES ('302', '1', 'admin', '/admin/auth/admin/edit/ids/2?dialog=1', '权限管理 系统用户管理 编辑', '{\"dialog\":\"1\",\"group\":[\"6\"],\"row\":{\"username\":\"xiaomei\",\"email\":\"12@qq.com\",\"nickname\":\"\\u674e\\u6885\",\"password\":\"\",\"loginfailure\":\"0\",\"status\":\"normal\"},\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291324');
+INSERT INTO `fa_admin_log` VALUES ('303', '1', 'admin', '/admin/auth/admin/edit/ids/2?dialog=1', '权限管理 系统用户管理 编辑', '{\"dialog\":\"1\",\"group\":[\"6\"],\"row\":{\"username\":\"limei\",\"email\":\"12@qq.com\",\"nickname\":\"\\u674e\\u6885\",\"password\":\"\",\"loginfailure\":\"0\",\"status\":\"normal\"},\"ids\":\"2\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291339');
+INSERT INTO `fa_admin_log` VALUES ('304', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291364');
+INSERT INTO `fa_admin_log` VALUES ('305', '1', 'admin', '/admin/auth/group/edit/ids/6?dialog=1', '权限管理 角色组 编辑', '{\"dialog\":\"1\",\"row\":{\"rules\":\"139,140,141,142,143,153,154,155,156,157,160,161,162,163,164,167,168,169,170,171,138,152,159,158,166,137,151\",\"pid\":\"1\",\"name\":\"\\u666e\\u901a\\u5458\\u5de5\\u7ec4\",\"status\":\"normal\"},\"ids\":\"6\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291368');
+INSERT INTO `fa_admin_log` VALUES ('306', '1', 'admin', '/admin/auth/rule/edit/ids/151?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"137\",\"name\":\"market\\/good\",\"title\":\"\\u5546\\u54c1\\u4fe1\\u606f\\u7ba1\\u7406\",\"icon\":\"fa fa-list\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"151\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291461');
+INSERT INTO `fa_admin_log` VALUES ('307', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291461');
+INSERT INTO `fa_admin_log` VALUES ('308', '1', 'admin', '/admin/auth/rule/edit/ids/151?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/good\",\"title\":\"\\u5546\\u54c1\\u4fe1\\u606f\\u7ba1\\u7406\",\"icon\":\"fa fa-list\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"151\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291507');
+INSERT INTO `fa_admin_log` VALUES ('309', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291508');
+INSERT INTO `fa_admin_log` VALUES ('310', '1', 'admin', '/admin/auth/rule/edit/ids/152?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/good\\/category\",\"title\":\"\\u5546\\u54c1\\u5206\\u7c7b\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"152\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291538');
+INSERT INTO `fa_admin_log` VALUES ('311', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291538');
+INSERT INTO `fa_admin_log` VALUES ('312', '1', 'admin', '/admin/auth/rule/edit/ids/190?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/good\\/back\",\"title\":\"\\u5546\\u54c1\\u9000\\u8d27\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"190\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291565');
+INSERT INTO `fa_admin_log` VALUES ('313', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291566');
+INSERT INTO `fa_admin_log` VALUES ('314', '1', 'admin', '/admin/auth/rule/edit/ids/159?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/good\\/base\\/info\",\"title\":\"\\u5546\\u54c1\\u4fe1\\u606f\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"159\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291587');
+INSERT INTO `fa_admin_log` VALUES ('315', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291587');
+INSERT INTO `fa_admin_log` VALUES ('316', '1', 'admin', '/admin/auth/rule/del/ids/151,158', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"151,158\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291603');
+INSERT INTO `fa_admin_log` VALUES ('317', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291604');
+INSERT INTO `fa_admin_log` VALUES ('318', '1', 'admin', '/admin/auth/rule/edit/ids/166?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/stock\\/add\",\"title\":\"\\u5546\\u54c1\\u5165\\u5e93\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"166\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291613');
+INSERT INTO `fa_admin_log` VALUES ('319', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291613');
+INSERT INTO `fa_admin_log` VALUES ('320', '1', 'admin', '/admin/auth/rule/edit/ids/184?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/stock\\/out\",\"title\":\"\\u5546\\u54c1\\u51fa\\u5e93\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"184\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291625');
+INSERT INTO `fa_admin_log` VALUES ('321', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291625');
+INSERT INTO `fa_admin_log` VALUES ('322', '1', 'admin', '/admin/auth/rule/edit/ids/172?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/customer\",\"title\":\"\\u5ba2\\u6237\\u4fe1\\u606f\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"172\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291661');
+INSERT INTO `fa_admin_log` VALUES ('323', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291662');
+INSERT INTO `fa_admin_log` VALUES ('324', '1', 'admin', '/admin/auth/rule/edit/ids/138?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"market\\/supplier\",\"title\":\"\\u4f9b\\u5e94\\u5546\\u4fe1\\u606f\\u7ba1\\u7406\",\"icon\":\"fa fa-circle-o\",\"weigh\":\"0\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"138\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291669');
+INSERT INTO `fa_admin_log` VALUES ('325', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291669');
+INSERT INTO `fa_admin_log` VALUES ('326', '1', 'admin', '/admin/auth/rule/del/ids/165', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"165\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291682');
+INSERT INTO `fa_admin_log` VALUES ('327', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291682');
+INSERT INTO `fa_admin_log` VALUES ('328', '1', 'admin', '/admin/auth/rule/edit/ids/7?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"general\\/attachment\",\"title\":\"\\u540e\\u53f0\\u56fe\\u7247\\u7ba1\\u7406\",\"icon\":\"fa fa-file-image-o\",\"weigh\":\"53\",\"condition\":\"\",\"remark\":\"Attachment tips\",\"status\":\"normal\"},\"ids\":\"7\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291688');
+INSERT INTO `fa_admin_log` VALUES ('329', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291688');
+INSERT INTO `fa_admin_log` VALUES ('330', '1', 'admin', '/admin/auth/rule/del/ids/137', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"137\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291695');
+INSERT INTO `fa_admin_log` VALUES ('331', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291695');
+INSERT INTO `fa_admin_log` VALUES ('332', '1', 'admin', '/admin/auth/rule/edit/ids/1?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"auth\\/adminlog\",\"title\":\"\\u63a7\\u5236\\u53f0\",\"icon\":\"fa fa-dashboard\",\"weigh\":\"143\",\"condition\":\"\",\"remark\":\"Dashboard tips\",\"status\":\"normal\"},\"ids\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291826');
+INSERT INTO `fa_admin_log` VALUES ('333', '1', 'admin', '/admin/auth/rule/del/ids/1', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"1\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291860');
+INSERT INTO `fa_admin_log` VALUES ('334', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291860');
+INSERT INTO `fa_admin_log` VALUES ('335', '1', 'admin', '/admin/auth/rule/edit/ids/8?dialog=1', '权限管理 菜单规则 编辑', '{\"dialog\":\"1\",\"row\":{\"ismenu\":\"1\",\"pid\":\"0\",\"name\":\"general\\/profile\",\"title\":\"\\u4e2a\\u4eba\\u8d26\\u6237\\u914d\\u7f6e\",\"icon\":\"fa fa-user\",\"weigh\":\"34\",\"condition\":\"\",\"remark\":\"\",\"status\":\"normal\"},\"ids\":\"8\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291906');
+INSERT INTO `fa_admin_log` VALUES ('336', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291906');
+INSERT INTO `fa_admin_log` VALUES ('337', '1', 'admin', '/admin/auth/rule/del/ids/2', '权限管理 菜单规则 删除', '{\"action\":\"del\",\"ids\":\"2\",\"params\":\"\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291936');
+INSERT INTO `fa_admin_log` VALUES ('338', '1', 'admin', '/admin/index/index', '', '{\"action\":\"refreshmenu\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550291936');
+INSERT INTO `fa_admin_log` VALUES ('339', '1', 'admin', '/admin/index/login.html', '登录', '{\"__token__\":\"46da79088d346236ac197d6459389458\",\"username\":\"admin\",\"captcha\":\"K5zt\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550292928');
+INSERT INTO `fa_admin_log` VALUES ('340', '1', 'admin', '/admin/index/login.html', '登录', '{\"__token__\":\"06c4e3d1ee04834b8ad0d97ef4fb92d0\",\"username\":\"admin\",\"captcha\":\"ALWV\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550293355');
+INSERT INTO `fa_admin_log` VALUES ('341', '0', 'Unknown', '/admin/index/login.html', '登录', '{\"__token__\":\"d298bcbbdcba1706c9f9a92a3d8ff4a9\",\"username\":\"liushuiwen\",\"captcha\":\"mmwk\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550294569');
+INSERT INTO `fa_admin_log` VALUES ('342', '1', 'admin', '/admin/index/login.html', '登录', '{\"__token__\":\"b33da79b123cf0c55299097683ade1e0\",\"username\":\"admin\",\"captcha\":\"jf6m\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550294766');
+INSERT INTO `fa_admin_log` VALUES ('343', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296322');
+INSERT INTO `fa_admin_log` VALUES ('344', '1', 'admin', '/admin/auth/group/edit/ids/6?dialog=1', '权限管理 角色组 编辑', '{\"dialog\":\"1\",\"row\":{\"rules\":\"8,23,29,30,31,32,33,34,139,153,160,167,173,185,191,7,138,152,159,166,172,184,190\",\"pid\":\"1\",\"name\":\"\\u666e\\u901a\\u5458\\u5de5\\u7ec4\",\"status\":\"normal\"},\"ids\":\"6\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296399');
+INSERT INTO `fa_admin_log` VALUES ('345', '1', 'admin', '/admin/auth/group/roletree', '', '{\"id\":\"6\",\"pid\":\"1\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296432');
+INSERT INTO `fa_admin_log` VALUES ('346', '1', 'admin', '/admin/auth/group/edit/ids/6?dialog=1', '权限管理 角色组 编辑', '{\"dialog\":\"1\",\"row\":{\"rules\":\"8,29,30,31,32,33,34,139,153,160,167,138,152,159,166\",\"pid\":\"1\",\"name\":\"\\u666e\\u901a\\u5458\\u5de5\\u7ec4\",\"status\":\"normal\"},\"ids\":\"6\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296522');
+INSERT INTO `fa_admin_log` VALUES ('347', '2', 'limei', '/admin/index/login', '登录', '{\"__token__\":\"551914e992921cbb165ded0c8a7d59de\",\"username\":\"limei\",\"captcha\":\"YBCE\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296541');
+INSERT INTO `fa_admin_log` VALUES ('348', '2', 'limei', '/admin/general.profile/update', '个人账户配置 更新个人信息', '{\"row\":{\"avatar\":\"\\/assets\\/img\\/avatar.png\",\"email\":\"12@qq.com\",\"nickname\":\"\\u674e\\u6885\",\"password\":\"999999\"}}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296561');
+INSERT INTO `fa_admin_log` VALUES ('349', '1', 'admin', '/admin/index/login', '登录', '{\"__token__\":\"62adc568abcd42c7a375f72a0c2cb117\",\"username\":\"admin\",\"captcha\":\"AYVE\"}', '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', '1550296595');
 
 -- ----------------------------
 -- Table structure for fa_attachment
@@ -391,11 +466,7 @@ CREATE TABLE `fa_auth_group` (
 -- Records of fa_auth_group
 -- ----------------------------
 INSERT INTO `fa_auth_group` VALUES ('1', '0', 'Admin group', '*', '1490883540', '149088354', 'normal');
-INSERT INTO `fa_auth_group` VALUES ('2', '1', 'Second group', '13,14,16,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,40,41,42,43,44,45,46,47,48,49,50,55,56,57,58,59,60,61,62,63,64,65,1,9,10,11,7,6,8,2,4,5', '1490883540', '1505465692', 'normal');
-INSERT INTO `fa_auth_group` VALUES ('3', '2', 'Third group', '1,4,9,10,11,13,14,15,16,17,40,41,42,43,44,45,46,47,48,49,50,55,56,57,58,59,60,61,62,63,64,65,5', '1490883540', '1502205322', 'normal');
-INSERT INTO `fa_auth_group` VALUES ('4', '1', 'Second group 2', '1,4,13,14,15,16,17,55,56,57,58,59,60,61,62,63,64,65', '1490883540', '1502205350', 'normal');
-INSERT INTO `fa_auth_group` VALUES ('5', '2', 'Third group 2', '1,2,6,7,8,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34', '1490883540', '1502205344', 'normal');
-INSERT INTO `fa_auth_group` VALUES ('6', '1', '操作员', '137,138,139,140,141,142,143,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171', '1549885577', '1550247279', 'normal');
+INSERT INTO `fa_auth_group` VALUES ('6', '1', '普通员工组', '8,29,30,31,32,33,34,139,153,160,167,138,152,159,166', '1549885577', '1550296522', 'normal');
 
 -- ----------------------------
 -- Table structure for fa_auth_group_access
@@ -442,28 +513,13 @@ CREATE TABLE `fa_auth_rule` (
 -- ----------------------------
 -- Records of fa_auth_rule
 -- ----------------------------
-INSERT INTO `fa_auth_rule` VALUES ('1', 'file', '0', 'dashboard', 'Dashboard', 'fa fa-dashboard', '', 'Dashboard tips', '1', '1497429920', '1497429920', '143', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('2', 'file', '0', 'general', 'General', 'fa fa-cogs', '', '', '1', '1497429920', '1497430169', '137', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('3', 'file', '0', 'category', 'Category', 'fa fa-list', '', 'Category tips', '1', '1497429920', '1497429920', '119', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('4', 'file', '0', 'addon', 'Addon', 'fa fa-rocket', '', 'Addon tips', '1', '1502035509', '1502035509', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('5', 'file', '0', 'auth', 'Auth', 'fa fa-group', '', '', '1', '1497429920', '1497430092', '99', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('6', 'file', '2', 'general/config', 'Config', 'fa fa-cog', '', 'Config tips', '1', '1497429920', '1497430683', '60', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('7', 'file', '2', 'general/attachment', 'Attachment', 'fa fa-file-image-o', '', 'Attachment tips', '1', '1497429920', '1497430699', '53', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('8', 'file', '2', 'general/profile', 'Profile', 'fa fa-user', '', '', '1', '1497429920', '1497429920', '34', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('9', 'file', '5', 'auth/admin', 'Admin', 'fa fa-user', '', 'Admin tips', '1', '1497429920', '1497430320', '118', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('7', 'file', '0', 'general/attachment', '后台图片管理', 'fa fa-file-image-o', '', 'Attachment tips', '1', '1497429920', '1550291688', '53', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('8', 'file', '0', 'general/profile', '个人账户配置', 'fa fa-user', '', '', '1', '1497429920', '1550291905', '34', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('9', 'file', '5', 'auth/admin', '系统用户管理', 'fa fa-user', '', 'Admin tips', '1', '1497429920', '1550291207', '118', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('10', 'file', '5', 'auth/adminlog', 'Admin log', 'fa fa-list-alt', '', 'Admin log tips', '1', '1497429920', '1497430307', '113', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('11', 'file', '5', 'auth/group', 'Group', 'fa fa-group', '', 'Group tips', '1', '1497429920', '1497429920', '109', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('12', 'file', '5', 'auth/rule', 'Rule', 'fa fa-bars', '', 'Rule tips', '1', '1497429920', '1497430581', '104', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('13', 'file', '1', 'dashboard/index', 'View', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '136', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('14', 'file', '1', 'dashboard/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '135', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('15', 'file', '1', 'dashboard/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '133', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('16', 'file', '1', 'dashboard/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '134', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('17', 'file', '1', 'dashboard/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '132', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('18', 'file', '6', 'general/config/index', 'View', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '52', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('19', 'file', '6', 'general/config/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '51', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('20', 'file', '6', 'general/config/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '50', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('21', 'file', '6', 'general/config/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '49', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('22', 'file', '6', 'general/config/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '48', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('23', 'file', '7', 'general/attachment/index', 'View', 'fa fa-circle-o', '', 'Attachment tips', '0', '1497429920', '1497429920', '59', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('24', 'file', '7', 'general/attachment/select', 'Select attachment', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '58', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('25', 'file', '7', 'general/attachment/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '57', 'normal');
@@ -476,11 +532,6 @@ INSERT INTO `fa_auth_rule` VALUES ('31', 'file', '8', 'general/profile/add', 'Ad
 INSERT INTO `fa_auth_rule` VALUES ('32', 'file', '8', 'general/profile/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '30', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('33', 'file', '8', 'general/profile/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '29', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('34', 'file', '8', 'general/profile/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '28', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('35', 'file', '3', 'category/index', 'View', 'fa fa-circle-o', '', 'Category tips', '0', '1497429920', '1497429920', '142', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('36', 'file', '3', 'category/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '141', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('37', 'file', '3', 'category/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '140', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('38', 'file', '3', 'category/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '139', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('39', 'file', '3', 'category/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '138', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('40', 'file', '9', 'auth/admin/index', 'View', 'fa fa-circle-o', '', 'Admin tips', '0', '1497429920', '1497429920', '117', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('41', 'file', '9', 'auth/admin/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '116', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('42', 'file', '9', 'auth/admin/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '115', 'normal');
@@ -496,77 +547,43 @@ INSERT INTO `fa_auth_rule` VALUES ('51', 'file', '12', 'auth/rule/index', 'View'
 INSERT INTO `fa_auth_rule` VALUES ('52', 'file', '12', 'auth/rule/add', 'Add', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '102', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('53', 'file', '12', 'auth/rule/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '101', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('54', 'file', '12', 'auth/rule/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1497429920', '1497429920', '100', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('55', 'file', '4', 'addon/index', 'View', 'fa fa-circle-o', '', 'Addon tips', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('56', 'file', '4', 'addon/add', 'Add', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('57', 'file', '4', 'addon/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('58', 'file', '4', 'addon/del', 'Delete', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('59', 'file', '4', 'addon/local', 'Local install', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('60', 'file', '4', 'addon/state', 'Update state', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('61', 'file', '4', 'addon/install', 'Install', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('62', 'file', '4', 'addon/uninstall', 'Uninstall', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('63', 'file', '4', 'addon/config', 'Setting', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('64', 'file', '4', 'addon/refresh', 'Refresh', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('65', 'file', '4', 'addon/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1502035509', '1502035509', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('66', 'file', '0', 'user', 'User', 'fa fa-list', '', '', '1', '1516374729', '1549874347', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('67', 'file', '66', 'user/user', 'User', 'fa fa-user', '', '', '1', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('68', 'file', '67', 'user/user/index', 'View', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('69', 'file', '67', 'user/user/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('70', 'file', '67', 'user/user/add', 'Add', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('71', 'file', '67', 'user/user/del', 'Del', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('72', 'file', '67', 'user/user/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('73', 'file', '66', 'user/group', 'User group', 'fa fa-users', '', '', '1', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('74', 'file', '73', 'user/group/add', 'Add', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('75', 'file', '73', 'user/group/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('76', 'file', '73', 'user/group/index', 'View', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('77', 'file', '73', 'user/group/del', 'Del', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('78', 'file', '73', 'user/group/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('79', 'file', '66', 'user/rule', 'User rule', 'fa fa-circle-o', '', '', '1', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('80', 'file', '79', 'user/rule/index', 'View', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('81', 'file', '79', 'user/rule/del', 'Del', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('82', 'file', '79', 'user/rule/add', 'Add', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('83', 'file', '79', 'user/rule/edit', 'Edit', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('84', 'file', '79', 'user/rule/multi', 'Multi', 'fa fa-circle-o', '', '', '0', '1516374729', '1516374729', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('137', 'file', '0', 'market', 'market', 'fa fa-list', '', '', '1', '1549888965', '1549888965', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('138', 'file', '137', 'market/supplier', '供应商信息管理', 'fa fa-circle-o', '', '', '1', '1549888965', '1549888965', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('138', 'file', '0', 'market/supplier', '供应商信息管理', 'fa fa-circle-o', '', '', '1', '1549888965', '1550291669', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('139', 'file', '138', 'market/supplier/index', '查看', 'fa fa-circle-o', '', '', '0', '1549888965', '1549890750', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('140', 'file', '138', 'market/supplier/add', '添加', 'fa fa-circle-o', '', '', '0', '1549888965', '1549890750', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('141', 'file', '138', 'market/supplier/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1549888965', '1549890750', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('142', 'file', '138', 'market/supplier/del', '删除', 'fa fa-circle-o', '', '', '0', '1549888965', '1549890750', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('143', 'file', '138', 'market/supplier/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1549888965', '1549890750', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('151', 'file', '137', 'market/good', 'good', 'fa fa-list', '', '', '1', '1549890723', '1549890723', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('152', 'file', '151', 'market/good/category', '商品分类管理', 'fa fa-circle-o', '', '', '1', '1549890723', '1549890723', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('152', 'file', '0', 'market/good/category', '商品分类管理', 'fa fa-circle-o', '', '', '1', '1549890723', '1550291538', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('153', 'file', '152', 'market/good/category/index', '查看', 'fa fa-circle-o', '', '', '0', '1549890723', '1549890723', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('154', 'file', '152', 'market/good/category/add', '添加', 'fa fa-circle-o', '', '', '0', '1549890723', '1549890723', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('155', 'file', '152', 'market/good/category/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1549890723', '1549890723', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('156', 'file', '152', 'market/good/category/del', '删除', 'fa fa-circle-o', '', '', '0', '1549890723', '1549890723', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('157', 'file', '152', 'market/good/category/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1549890723', '1549890723', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('158', 'file', '151', 'market/good/base', 'base', 'fa fa-list', '', '', '1', '1549891013', '1549891013', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('159', 'file', '158', 'market/good/base/info', '商品信息管理', 'fa fa-circle-o', '', '', '1', '1549891014', '1549891014', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('159', 'file', '0', 'market/good/base/info', '商品信息管理', 'fa fa-circle-o', '', '', '1', '1549891014', '1550291587', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('160', 'file', '159', 'market/good/base/info/index', '查看', 'fa fa-circle-o', '', '', '0', '1549891014', '1549891014', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('161', 'file', '159', 'market/good/base/info/add', '添加', 'fa fa-circle-o', '', '', '0', '1549891014', '1549891014', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('162', 'file', '159', 'market/good/base/info/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1549891014', '1549891014', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('163', 'file', '159', 'market/good/base/info/del', '删除', 'fa fa-circle-o', '', '', '0', '1549891014', '1549891014', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('164', 'file', '159', 'market/good/base/info/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1549891014', '1549891014', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('165', 'file', '137', 'market/stock', 'stock', 'fa fa-list', '', '', '1', '1549891050', '1549891050', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('166', 'file', '165', 'market/stock/add', '商品入库', 'fa fa-circle-o', '', '', '1', '1549891050', '1549891050', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('166', 'file', '0', 'market/stock/add', '商品入库管理', 'fa fa-circle-o', '', '', '1', '1549891050', '1550291613', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('167', 'file', '166', 'market/stock/add/index', '查看', 'fa fa-circle-o', '', '', '0', '1549891050', '1549891050', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('168', 'file', '166', 'market/stock/add/add', '添加', 'fa fa-circle-o', '', '', '0', '1549891050', '1549891050', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('169', 'file', '166', 'market/stock/add/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1549891050', '1549891050', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('170', 'file', '166', 'market/stock/add/del', '删除', 'fa fa-circle-o', '', '', '0', '1549891050', '1549891050', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('171', 'file', '166', 'market/stock/add/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1549891050', '1549891050', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('172', 'file', '137', 'market/customer', '客户信息管理', 'fa fa-circle-o\r', '', '', '1', '1550283420', '1550283420', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('172', 'file', '0', 'market/customer', '客户信息管理', 'fa fa-circle-o', '', '', '1', '1550283420', '1550291661', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('173', 'file', '172', 'market/customer/index', '查看', 'fa fa-circle-o', '', '', '0', '1550283420', '1550283420', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('174', 'file', '172', 'market/customer/add', '添加', 'fa fa-circle-o', '', '', '0', '1550283420', '1550283420', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('175', 'file', '172', 'market/customer/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1550283420', '1550283420', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('176', 'file', '172', 'market/customer/del', '删除', 'fa fa-circle-o', '', '', '0', '1550283420', '1550283420', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('177', 'file', '172', 'market/customer/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1550283420', '1550283420', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('184', 'file', '165', 'market/stock/out', '商品出库', 'fa fa-circle-o\r', '', '', '1', '1550286274', '1550286274', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('184', 'file', '0', 'market/stock/out', '商品出库管理', 'fa fa-circle-o', '', '', '1', '1550286274', '1550291624', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('185', 'file', '184', 'market/stock/out/index', '查看', 'fa fa-circle-o', '', '', '0', '1550286274', '1550286274', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('186', 'file', '184', 'market/stock/out/add', '添加', 'fa fa-circle-o', '', '', '0', '1550286274', '1550286274', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('187', 'file', '184', 'market/stock/out/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1550286274', '1550286274', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('188', 'file', '184', 'market/stock/out/del', '删除', 'fa fa-circle-o', '', '', '0', '1550286274', '1550286274', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('189', 'file', '184', 'market/stock/out/multi', '批量更新', 'fa fa-circle-o', '', '', '0', '1550286274', '1550286274', '0', 'normal');
-INSERT INTO `fa_auth_rule` VALUES ('190', 'file', '151', 'market/good/back', '商品退货', 'fa fa-circle-o\r', '', '', '1', '1550289071', '1550289071', '0', 'normal');
+INSERT INTO `fa_auth_rule` VALUES ('190', 'file', '0', 'market/good/back', '商品退货管理', 'fa fa-circle-o', '', '', '1', '1550289071', '1550291565', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('191', 'file', '190', 'market/good/back/index', '查看', 'fa fa-circle-o', '', '', '0', '1550289071', '1550289071', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('192', 'file', '190', 'market/good/back/add', '添加', 'fa fa-circle-o', '', '', '0', '1550289071', '1550289071', '0', 'normal');
 INSERT INTO `fa_auth_rule` VALUES ('193', 'file', '190', 'market/good/back/edit', '编辑', 'fa fa-circle-o', '', '', '0', '1550289071', '1550289071', '0', 'normal');
@@ -636,7 +653,7 @@ CREATE TABLE `fa_config` (
 -- ----------------------------
 -- Records of fa_config
 -- ----------------------------
-INSERT INTO `fa_config` VALUES ('1', 'name', 'basic', 'Site name', '请填写站点名称', 'string', 'FastAdmin', '', 'required', '');
+INSERT INTO `fa_config` VALUES ('1', 'name', 'basic', 'Site name', '请填写站点名称', 'string', '超市管理系统', '', 'required', '');
 INSERT INTO `fa_config` VALUES ('2', 'beian', 'basic', 'Beian', '粤ICP备15054802号-4', 'string', '', '', '', '');
 INSERT INTO `fa_config` VALUES ('3', 'cdnurl', 'basic', 'Cdn url', '如果静态资源使用第三方云储存请配置该值', 'string', '', '', '', '');
 INSERT INTO `fa_config` VALUES ('4', 'version', 'basic', 'Version', '如果静态资源有变动请重新配置该值', 'string', '1.0.1', '', 'required', '');
