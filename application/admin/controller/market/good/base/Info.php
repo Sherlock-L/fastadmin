@@ -48,7 +48,8 @@ class Info extends Backend
             {
                 return $this->selectpage();
             }
-            list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+            list($where, $sort, $order, $offset, $limit) = $this->buildparams(['name','num']);
+
             $total = $this->model
                     ->with(['category','supplier'])
                     ->where($where)

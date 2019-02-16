@@ -33,9 +33,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'add_stock', title: __('Add_stock')},
                         // {field: 'supplier_id', title: __('Supplier_id')},
                         // {field: 'admin_id', title: __('Admin_id')},
-                        // {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
+                         {field: 'createtime', title: __('Createtime'), operate:'RANGE', addclass:'datetimerange', formatter: Table.api.formatter.datetime},
                         // {field: 'admin.id', title: __('Admin.id')},
-                        // {field: 'admin.username', title: __('Admin.username')},
+                         {field: 'admin.username', title: __('Admin.username')},
                         // {field: 'admin.nickname', title: __('Admin.nickname')},
                         // {field: 'admin.password', title: __('Admin.password')},
                         // {field: 'admin.salt', title: __('Admin.salt')},
@@ -51,7 +51,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         // {field: 'category.name', title: __('Category.name')},
                         // {field: 'supplier.id', title: __('Supplier.id')},
                         // {field: 'supplier.num', title: __('Supplier.num')},
-                        // {field: 'supplier.company', title: __('Supplier.company')},
+                         {field: 'supplier.company', title: __('Supplier.company')},
                         // {field: 'supplier.name', title: __('Supplier.name')},
                         // {field: 'supplier.tel', title: __('Supplier.tel')},
                         // {field: 'supplier.address', title: __('Supplier.address')},
@@ -77,5 +77,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             }
         }
     };
+
     return Controller;
 });

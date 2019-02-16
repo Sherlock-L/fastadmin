@@ -13,7 +13,7 @@ return [
     'Remark'  =>  '备注',
     'Createtime'  =>  '创建时间',
     'Admin.id'  =>  'ID',
-    'Admin.username'  =>  '用户名',
+    'Admin.username'  =>  '操作员名称',
     'Admin.nickname'  =>  '昵称',
     'Admin.password'  =>  '密码',
     'Admin.salt'  =>  '密码盐',
