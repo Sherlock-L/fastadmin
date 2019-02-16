@@ -42,11 +42,12 @@ class Index extends Backend
                 $this->success('', null, ['menulist' => $menulist, 'navlist' => $navlist]);
             }
         }
+
         $this->view->assign('menulist', $menulist);
         $this->view->assign('navlist', $navlist);
         $this->view->assign('fixedmenu', $fixedmenu);
         $this->view->assign('referermenu', $referermenu);
-        $this->view->assign('title', __('Home'));
+        $this->view->assign('title', "超市管理系统");
         return $this->view->fetch();
     }
 
